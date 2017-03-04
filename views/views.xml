@@ -129,15 +129,20 @@
              <h3><label for="name" class="oe_edit_only"/></h3>
              <h1><field name="name"/></h1>
               <notebook>
-                <page string="Description">
-                 <group>
+               <page string="Information">
+                <group>
+                 <group string="Description" cols="3">
                   <field name="instructor"/>
                   <field name="course"/>
                   <field name="start_date"/>
                   <field name="seats"/>
                   <field name="duration"/>
                  </group>
-                </page>
+                 <group string="Attendees" cols="3">
+                  <field nolabel="1" name="attendees"/>
+                 </group>
+                </group> 
+               </page>
               </notebook>
           </sheet>
          </form>
