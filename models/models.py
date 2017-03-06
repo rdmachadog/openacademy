@@ -21,8 +21,13 @@ class Session(models.Model):
     seats = fields.Integer()
     attendees = fields.Many2many('res.partner')
 #     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
+    percentage_seats_taken = fields.Float(compute="_compute_percentage_seats_taken")
 #
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
+    @api.multi
+    def _compute_percentage_seats_taken(self):
+        for record in self:
+            if record.seats:
+                record.percentage_seats_taken = float(len(record.attendees))/record.seats * 100.00
+            else:
+                record.percentage_seats_taken = 0.00
+

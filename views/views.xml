@@ -115,6 +115,7 @@
           <field name="start_date"/>
           <field name="seats"/>
           <field name="duration"/>
+          <field name="percentage_seats_taken" widget="progressbar"/>
         </tree>
       </field>
     </record>
@@ -137,6 +138,7 @@
                   <field name="start_date"/>
                   <field name="seats"/>
                   <field name="duration"/>
+                  <field name="percentage_seats_taken" widget="progressbar"/>
                  </group>
                  <group string="Attendees" cols="3">
                   <field nolabel="1" name="attendees"/>
