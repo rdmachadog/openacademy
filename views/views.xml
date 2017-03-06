@@ -132,7 +132,7 @@
                <page string="Information">
                 <group>
                  <group string="Description" cols="3">
-                  <field name="instructor"/>
+                  <field name="instructor" domain="['|',('instructor','=','True'),'|',('category_id.name','ilike','Teacher'),('category_id.parent_id.name','ilike','Teacher')]"/>
                   <field name="course"/>
                   <field name="start_date"/>
                   <field name="seats"/>
