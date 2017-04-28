@@ -29,6 +29,7 @@
         'views/templates.xml',
         'views/res_partner_view.xml',
         'data/data.xml',
+        'report/openacademy_session_report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
